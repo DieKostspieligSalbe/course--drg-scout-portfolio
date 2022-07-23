@@ -1,0 +1,26 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/main_bg.png') no-repeat 50%/cover;
+    padding-top: 292px;
+    h1 {
+        width: 504px;
+        margin-top: 10px;
+    }
+    &__buttons {
+        display: flex;
+        margin-top: 25px;
+        gap: 44px;
+        align-items: center;
+    }
+    &__link {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        transition: 0.2s all ease;
+        &:hover {
+            text-decoration: none;
+            color: $orange;
+        }
+    }
+}

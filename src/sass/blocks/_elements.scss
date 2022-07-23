@@ -1,0 +1,46 @@
+.button {
+    position: relative;
+    height: 45px;
+    background: $orange;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 12px 37px;
+    color: black !important;
+    border: none;
+    transition: 0.3s all ease;
+    overflow: hidden;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -35%;
+        width: 50%;
+        height: 100%;
+        transition: 0.5s all ease;
+        background: white;
+        opacity: 0;
+        transform: skew(-30deg);
+    }
+    &::after {
+        width: 10%;
+        left: 20%;
+    }
+    &:hover {
+        &::before {
+            opacity: 0.5;
+            overflow: hidden;
+            transform: translateX(50%) skew(-30deg);  
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+        }
+        &::after {
+            opacity: 0.3;
+            transition-delay: 0.1s;
+            transform: translateX(38px) skew(-30deg);
+        }
+    }
+}
+
+.before_circle {
+    position: relative;
+    z-index: 2;
+    @include circle;
+}

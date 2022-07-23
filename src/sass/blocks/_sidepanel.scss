@@ -1,0 +1,33 @@
+.sidepanel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 50vh;
+    position: fixed;
+    top: 65vh;
+    left: 3vw;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    z-index: 5;
+    &__line {
+        width: 70px;
+        height: 0px;
+        border: 1px solid #FFFFFF;
+    }
+    &__link {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    i {
+        transition: 0.2s all ease;
+        &:hover {
+            color: $orange;
+            transform: scale(1.3);
+        }
+    }
+}
+

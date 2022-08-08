@@ -2,7 +2,8 @@
     min-height: 100vh;
     position: relative;
     background: url('../img/main_bg.png') no-repeat 50%/cover;
-    padding-top: 292px;
+    padding-top: 350px;
+    box-shadow: inset 0 0 500px black;
     h1 {
         width: 504px;
         margin-top: 10px;
@@ -17,7 +18,6 @@
         text-decoration: none;
         font-weight: bold;
         color: white;
-        transition: 0.2s all ease;
         &:hover {
             text-decoration: none;
             color: $orange;

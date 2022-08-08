@@ -1,0 +1,125 @@
+.burger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+    cursor: pointer;
+    &:hover, &.focused {
+        span:not(.long){
+            background: $orange;
+            transform: translateX(-2px);
+        }
+        .long {
+            background: $orange;
+            transform: translateX(-8px);
+        }
+    }
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: white;
+    }
+    .long {
+        width: 36px;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s all ease;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__orange {
+        position: relative;
+        padding-top: 17vh;
+        padding-left: 2vw;
+        //left: -100%;
+        width: 18vw;
+        height: 100%;
+        background: $orange;   
+        transition: 0.6s all ease;
+        z-index: 10;
+    }
+    &__close {
+        position: absolute;
+        top: 22px;
+        right: 25px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1) rotate(90deg);
+        }
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 35px;
+    }
+    &__item {
+        position: relative;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 15px;  
+        &::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            border-radius: 100%;
+            transition: 0.1s all;
+        }
+        &:hover {  
+            &::before {
+                background: $darkorange;
+                border: none;
+            } 
+        }
+        a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            &:hover {
+                transform: translateX(10px);
+            }
+        }
+    }
+    &__socials {
+        position: absolute;
+        bottom: 3vh;
+        left: calc(50% - 60px);
+        display: flex;
+        gap: 15px;
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+    &__white {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+    }
+}

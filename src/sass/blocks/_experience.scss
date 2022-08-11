@@ -1,0 +1,69 @@
+.experience {
+    background: #000916;
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        position: relative;
+    }
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 12%;
+    }
+    &__column {
+        &-title {
+            padding-left: 35px;
+        }
+    }
+    &__item {
+        padding-left: 35px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -17px;
+            left: -16px;
+            width: 3px;
+            height: 115%;
+            background-color: $orange;
+        }
+    }
+    &__head {
+        position: relative;
+        padding: 45px 0 0 60px;
+        &-title {
+            margin-bottom: 0;
+        }
+    }
+    &__text {
+        padding-top: 15px;
+    }
+    &__image {
+        position: absolute;
+        top: 49px;
+        left: 3px;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: -54px;
+            height: 3px;
+            width: 54px;
+            background-color: $orange;
+        }
+    }
+    img {
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+    }
+    i {
+        position: absolute;
+        top: 28px;
+        left: 13px;
+        color: white;
+    }
+}

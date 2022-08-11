@@ -38,23 +38,38 @@
     }
 }
 
-.before_circle {
+.before-circle {
     position: relative;
     z-index: 2;
     @include circle; //??????
-    &-adjusted {
+    &_icons {
         &::before {
             top: 0;
+        }
+    }
+    &_center {
+        &::before {
+            top: -5px;
+            left: 49%;
+            transform: translateX(-5px);
+        }
+    }
+    &_small {
+        &::before {
+            width: 15px;
+            height: 15px;
+            top: 7px;
+            left: -22px;
         }
     }
 }
 
 
-.orange_line {
+.orange-line {
     width: 60px;
     height: 3px;
     background: $orange;
     &_mt25 {
-        margin-top: 25px;
+        margin: 25px auto 0 auto;
     }
 }

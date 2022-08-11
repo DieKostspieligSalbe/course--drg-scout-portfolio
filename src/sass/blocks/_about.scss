@@ -1,8 +1,8 @@
 .about {
     background: #000916;
     padding-top: 120px;
-    padding-bottom: 300px;
     &__wrapper {
+        padding-right: 70px;
         display: grid;
         grid-template-columns: 35% minmax(50%, auto);
         grid-template-rows: minmax(200px, auto) minmax(255px, auto);
@@ -40,7 +40,6 @@
     }
 
     img {
-        color: white;
         height: 45px;
         width: 45px;
         transform: translate(5px, 5px);

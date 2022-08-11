@@ -12,6 +12,14 @@
         line-height: 24px;
         padding-left: 10px;
     }
+    &_fz16np {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
     &_fz36 {
         font-size: 36px;
         line-height: 60px;
@@ -26,8 +34,9 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: #FFFFFF; 
+    color: $grey; 
     &_fz14 {
+        color: $lightgrey;
         font-size: 14px;
         line-height: 21px;
     }

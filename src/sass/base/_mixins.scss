@@ -6,8 +6,32 @@
         background: $orange;
         border-radius: 100%;
         position: absolute;
-        top: -25%;
+        top: -30%;
         left: 0;
         z-index: -3;
     }
 }
+
+@mixin animation-main {
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: 0.5s all ease;
+        opacity: 0;
+        transform: skew(-30deg);
+    }
+    &:hover {
+        &::before {
+            opacity: 0.2;
+            transform: translateX(50%) skew(-30deg);  
+        }
+        &::after {
+            opacity: 0.15;
+            transition-delay: 0.2s;
+            transform: translateX(38px) skew(-30deg);
+        }
+    }
+}
+

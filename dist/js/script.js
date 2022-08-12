@@ -10,4 +10,11 @@ burger.addEventListener('click', () => {
 close.addEventListener('click', () => {
     menu.classList.remove('active');
     burger.classList.remove('focused');
-})
+});
+
+const percentages = document.querySelectorAll('.percent');
+const percentageLines = document.querySelectorAll('.skills__percentage_actual');
+
+percentages.forEach((element, index) => {
+    percentageLines[index].style.width = element.innerHTML;
+});

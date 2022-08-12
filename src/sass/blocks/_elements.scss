@@ -7,17 +7,11 @@
     color: black !important;
     border: none;
     overflow: hidden;
+    @include animation-main;
     &::before, &::after {
-        content: '';
-        position: absolute;
-        top: 0;
         left: -35%;
         width: 50%;
-        height: 100%;
-        transition: 0.5s all ease;
         background: $darkorange;
-        opacity: 0;
-        transform: skew(-30deg);
     }
     &::after {
         width: 10%;
@@ -26,14 +20,9 @@
     &:hover {
         &::before {
             opacity: 0.5;
-            overflow: hidden;
-            transform: translateX(50%) skew(-30deg);  
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
         }
         &::after {
             opacity: 0.3;
-            transition-delay: 0.1s;
-            transform: translateX(38px) skew(-30deg);
         }
     }
 }

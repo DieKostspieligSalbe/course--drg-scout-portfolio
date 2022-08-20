@@ -18,7 +18,7 @@
         position: absolute;
         top: 0;
         height: 100%;
-        transition: 0.5s all ease;
+        transition: 0.3s all ease;
         opacity: 0;
         transform: skew(-30deg);
     }
@@ -29,7 +29,7 @@
         }
         &::after {
             opacity: 0.15;
-            transition-delay: 0.2s;
+            transition-delay: 0.1s;
             transform: translateX(38px) skew(-30deg);
         }
     }

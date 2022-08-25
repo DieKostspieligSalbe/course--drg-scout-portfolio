@@ -20,10 +20,6 @@
         font-size: 20px;
         line-height: 30px;
     }
-    &_fz36 {
-        font-size: 36px;
-        line-height: 60px;
-    }
     &_fz48 {
         font-size: 48px;
     }
@@ -75,7 +71,7 @@
     visibility: hidden;
     &+label {
         position: relative;
-        &::before {
+        &::before { //actual checkbox ring
             content: '';
             position: absolute;
             top: 1px;
@@ -86,6 +82,9 @@
             border: 1px solid $orange;
             border-radius: 100%;
             cursor: pointer;
+        }
+        &:hover::before {
+            border: 3px solid $orange;
         }
     }
     &:checked+label {

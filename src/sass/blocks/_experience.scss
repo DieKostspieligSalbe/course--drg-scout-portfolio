@@ -15,13 +15,14 @@
     &__item {
         padding-left: 35px;
         position: relative;
+        height: 200px;
         &::before {
             content: '';
             position: absolute;
             top: -17px;
             left: -16px;
             width: 3px;
-            height: 115%;
+            height: 111%;
             background-color: $orange;
         }
     }
